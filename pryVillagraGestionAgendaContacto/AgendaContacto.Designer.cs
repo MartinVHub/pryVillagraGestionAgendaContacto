@@ -32,12 +32,12 @@
             lblNumero = new Label();
             txtContacto = new TextBox();
             mtbNumero = new MaskedTextBox();
-            label3 = new Label();
+            lblGestionAgendaContacto = new Label();
             btnCancelar = new Button();
             btnRegistrar = new Button();
             lstResumen = new ListBox();
-            lblcantcontacto = new Label();
-            label2 = new Label();
+            lblCantContacto = new Label();
+            lblFechayHora = new Label();
             lblCantidad = new Label();
             lblFecha = new Label();
             SuspendLayout();
@@ -46,7 +46,7 @@
             // 
             lblContacto.AutoSize = true;
             lblContacto.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblContacto.Location = new Point(130, 82);
+            lblContacto.Location = new Point(79, 82);
             lblContacto.Name = "lblContacto";
             lblContacto.Size = new Size(90, 25);
             lblContacto.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             lblNumero.AutoSize = true;
             lblNumero.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNumero.Location = new Point(134, 135);
+            lblNumero.Location = new Point(79, 133);
             lblNumero.Name = "lblNumero";
             lblNumero.Size = new Size(83, 25);
             lblNumero.TabIndex = 1;
@@ -65,7 +65,7 @@
             // txtContacto
             // 
             txtContacto.Font = new Font("Segoe UI", 12F);
-            txtContacto.Location = new Point(282, 82);
+            txtContacto.Location = new Point(235, 82);
             txtContacto.Name = "txtContacto";
             txtContacto.Size = new Size(100, 29);
             txtContacto.TabIndex = 2;
@@ -73,25 +73,25 @@
             // mtbNumero
             // 
             mtbNumero.Font = new Font("Segoe UI", 12F);
-            mtbNumero.Location = new Point(282, 137);
+            mtbNumero.Location = new Point(235, 133);
             mtbNumero.Mask = "(999)000-0000";
             mtbNumero.Name = "mtbNumero";
             mtbNumero.Size = new Size(100, 29);
             mtbNumero.TabIndex = 3;
             // 
-            // label3
+            // lblGestionAgendaContacto
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(134, 9);
-            label3.Name = "label3";
-            label3.Size = new Size(365, 32);
-            label3.TabIndex = 4;
-            label3.Text = " GESTIÓN AGENDA CONTACTO";
+            lblGestionAgendaContacto.AutoSize = true;
+            lblGestionAgendaContacto.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblGestionAgendaContacto.Location = new Point(42, 19);
+            lblGestionAgendaContacto.Name = "lblGestionAgendaContacto";
+            lblGestionAgendaContacto.Size = new Size(333, 30);
+            lblGestionAgendaContacto.TabIndex = 4;
+            lblGestionAgendaContacto.Text = " GESTIÓN AGENDA CONTACTO";
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(157, 210);
+            btnCancelar.Location = new Point(95, 210);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(100, 40);
             btnCancelar.TabIndex = 5;
@@ -101,7 +101,7 @@
             // btnRegistrar
             // 
             btnRegistrar.Enabled = false;
-            btnRegistrar.Location = new Point(302, 210);
+            btnRegistrar.Location = new Point(245, 210);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(100, 40);
             btnRegistrar.TabIndex = 6;
@@ -112,28 +112,28 @@
             // 
             lstResumen.FormattingEnabled = true;
             lstResumen.ItemHeight = 15;
-            lstResumen.Location = new Point(157, 273);
+            lstResumen.Location = new Point(95, 271);
             lstResumen.Name = "lstResumen";
             lstResumen.Size = new Size(225, 64);
             lstResumen.TabIndex = 7;
             // 
-            // lblcantcontacto
+            // lblCantContacto
             // 
-            lblcantcontacto.AutoSize = true;
-            lblcantcontacto.Location = new Point(157, 367);
-            lblcantcontacto.Name = "lblcantcontacto";
-            lblcantcontacto.Size = new Size(84, 15);
-            lblcantcontacto.TabIndex = 8;
-            lblcantcontacto.Text = "Cant Contacto";
+            lblCantContacto.AutoSize = true;
+            lblCantContacto.Location = new Point(103, 367);
+            lblCantContacto.Name = "lblCantContacto";
+            lblCantContacto.Size = new Size(84, 15);
+            lblCantContacto.TabIndex = 8;
+            lblCantContacto.Text = "Cant Contacto";
             // 
-            // label2
+            // lblFechayHora
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(157, 407);
-            label2.Name = "label2";
-            label2.Size = new Size(76, 15);
-            label2.TabIndex = 9;
-            label2.Text = "Fecha y Hora";
+            lblFechayHora.AutoSize = true;
+            lblFechayHora.Location = new Point(103, 407);
+            lblFechayHora.Name = "lblFechayHora";
+            lblFechayHora.Size = new Size(76, 15);
+            lblFechayHora.TabIndex = 9;
+            lblFechayHora.Text = "Fecha y Hora";
             // 
             // lblCantidad
             // 
@@ -156,15 +156,15 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(586, 450);
+            ClientSize = new Size(446, 450);
             Controls.Add(lblFecha);
             Controls.Add(lblCantidad);
-            Controls.Add(label2);
-            Controls.Add(lblcantcontacto);
+            Controls.Add(lblFechayHora);
+            Controls.Add(lblCantContacto);
             Controls.Add(lstResumen);
             Controls.Add(btnRegistrar);
             Controls.Add(btnCancelar);
-            Controls.Add(label3);
+            Controls.Add(lblGestionAgendaContacto);
             Controls.Add(mtbNumero);
             Controls.Add(txtContacto);
             Controls.Add(lblNumero);
@@ -181,12 +181,12 @@
         private Label lblNumero;
         private TextBox txtContacto;
         private MaskedTextBox mtbNumero;
-        private Label label3;
+        private Label lblGestionAgendaContacto;
         private Button btnCancelar;
         private Button btnRegistrar;
         private ListBox lstResumen;
-        private Label lblcantcontacto;
-        private Label label2;
+        private Label lblCantContacto;
+        private Label lblFechayHora;
         private Label lblCantidad;
         private Label lblFecha;
     }
