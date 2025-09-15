@@ -43,27 +43,58 @@ namespace pryVillagraGestionAgendaContacto
 
         int indice = 0;
 
-        private void btnAceptar_click(object sender, EventArgs e)
+        private void btnRegistrar_click(object sender, EventArgs e)
         {
-            vContacto = txtContacto.Text;
-            vNumero = mtbNumero.Text;
-            vecContactos[indice] = mtbNumero.Text;
+            if (txtContacto.Text != "" && mtbNumero.Text !="")
 
 
-            lstResumen.Items.Add("contacto: + vContacto + = Telefono: ");
+            { 
+                
+                vContacto = txtContacto.Text;
+                vNumero = mtbNumero.Text;
 
-            vContador = vContador + 1;
-            txtContacto.Text = Convert.ToString(vContador);
-            mtbNumero.Text = Convert.ToString(vFecha);
+                //Guardar en los vectores
+                vecContactos[indice] = vContacto;
+                vecNumero[indice] = vNumero;
 
+                //Mostrar en el ListBox
+
+
+                lstResumen.Items.Add("contacto: " + vContacto + " - Telefono: " + vNumero);
+
+                //Aumentar contador
+                vContador++;
+                indice++;
+
+                //Mostrar cantidad y fecha/hora en labels
+                 lblCant.Text = "CantContacto: " vContador.ToString();
+                lblFechay.Text = "Fecha y Hora: " + DateTime.Now.ToString();
+                
+                //Limpiar campos
+
+                txtContacto.Text = "";
+                mtbNumero.Text = "";
+
+                //Volver el foco al textbox
+
+                 txtContacto.Focus();
+               
+            }
+            else
+            {
+                MessageBox.Show("Debe completar ambos campos.");
+            }
+    }
+
+
+        private void btnCancelar_click(object sender, EventArgs e)
+        {
             txtContacto.Text = "";
             mtbNumero.Text = "";
-
-            indice++;
             txtContacto.Focus();
         }
-    }
-}
+
+
 
       
     

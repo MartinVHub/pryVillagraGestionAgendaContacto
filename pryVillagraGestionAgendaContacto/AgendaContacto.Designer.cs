@@ -36,10 +36,12 @@
             btnCancelar = new Button();
             btnRegistrar = new Button();
             lstResumen = new ListBox();
-            lblCantContacto = new Label();
-            lblFechayHora = new Label();
+            lblCant = new Label();
+            lblFechay = new Label();
             lblCantidad = new Label();
             lblFecha = new Label();
+            lblCantContacto = new Label();
+            lblFechaHora = new Label();
             SuspendLayout();
             // 
             // lblContacto
@@ -117,23 +119,23 @@
             lstResumen.Size = new Size(225, 64);
             lstResumen.TabIndex = 7;
             // 
-            // lblCantContacto
+            // lblCant
             // 
-            lblCantContacto.AutoSize = true;
-            lblCantContacto.Location = new Point(103, 367);
-            lblCantContacto.Name = "lblCantContacto";
-            lblCantContacto.Size = new Size(84, 15);
-            lblCantContacto.TabIndex = 8;
-            lblCantContacto.Text = "Cant Contacto";
+            lblCant.AutoSize = true;
+            lblCant.Location = new Point(103, 367);
+            lblCant.Name = "lblCant";
+            lblCant.Size = new Size(84, 15);
+            lblCant.TabIndex = 8;
+            lblCant.Text = "Cant Contacto";
             // 
-            // lblFechayHora
+            // lblFechay
             // 
-            lblFechayHora.AutoSize = true;
-            lblFechayHora.Location = new Point(103, 407);
-            lblFechayHora.Name = "lblFechayHora";
-            lblFechayHora.Size = new Size(76, 15);
-            lblFechayHora.TabIndex = 9;
-            lblFechayHora.Text = "Fecha y Hora";
+            lblFechay.AutoSize = true;
+            lblFechay.Location = new Point(103, 407);
+            lblFechay.Name = "lblFechay";
+            lblFechay.Size = new Size(76, 15);
+            lblFechay.TabIndex = 9;
+            lblFechay.Text = "Fecha y Hora";
             // 
             // lblCantidad
             // 
@@ -151,16 +153,36 @@
             lblFecha.Size = new Size(0, 15);
             lblFecha.TabIndex = 11;
             // 
+            // lblCantContacto
+            // 
+            lblCantContacto.AutoSize = true;
+            lblCantContacto.Location = new Point(237, 370);
+            lblCantContacto.Name = "lblCantContacto";
+            lblCantContacto.Size = new Size(17, 15);
+            lblCantContacto.TabIndex = 12;
+            lblCantContacto.Text = "\"\"";
+            // 
+            // lblFechaHora
+            // 
+            lblFechaHora.AutoSize = true;
+            lblFechaHora.Location = new Point(237, 407);
+            lblFechaHora.Name = "lblFechaHora";
+            lblFechaHora.Size = new Size(17, 15);
+            lblFechaHora.TabIndex = 13;
+            lblFechaHora.Text = "\"\"";
+            // 
             // AgendaContacto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(446, 450);
+            Controls.Add(lblFechaHora);
+            Controls.Add(lblCantContacto);
             Controls.Add(lblFecha);
             Controls.Add(lblCantidad);
-            Controls.Add(lblFechayHora);
-            Controls.Add(lblCantContacto);
+            Controls.Add(lblFechay);
+            Controls.Add(lblCant);
             Controls.Add(lstResumen);
             Controls.Add(btnRegistrar);
             Controls.Add(btnCancelar);
@@ -185,9 +207,11 @@
         private Button btnCancelar;
         private Button btnRegistrar;
         private ListBox lstResumen;
-        private Label lblCantContacto;
-        private Label lblFechayHora;
+        private Label lblCant;
+        private Label lblFechay;
         private Label lblCantidad;
         private Label lblFecha;
+        private Label lblCantContacto;
+        private Label lblFechaHora;
     }
 }
